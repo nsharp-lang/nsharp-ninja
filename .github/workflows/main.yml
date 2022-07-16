@@ -1,0 +1,12 @@
+jobs:
+  build-linux-x64:
+    runs-on: "ubuntu-22.04"
+    steps:
+    - uses: "actions/checkout@v3"
+      with:
+        submodules: true
+    - uses: "actions/setup-dotnet@v2"
+      with:
+        global-json-file: "global.json"
+    - run: "dotnet restore"
+on: "push"

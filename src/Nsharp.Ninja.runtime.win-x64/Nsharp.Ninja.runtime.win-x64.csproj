@@ -3,7 +3,7 @@
 	<Import Project="../dir.props" />
 	
 	<PropertyGroup>
-		<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
 		<TargetFramework>net6.0</TargetFramework>
 	</PropertyGroup>
 

@@ -25,6 +25,6 @@ jobs:
     - run: "dotnet pack ./src/Nsharp.Ninja.runtime.win-x64/Nsharp.Ninja.runtime.win-x64.csproj --configuration Release"
     - uses: "actions/upload-artifact@v3"
       with:
-        name: "Nsharp.Ninja.runtime.win-x64"
+        name: "Nsharp.Ninja"
         path: "./src/Nsharp.Ninja.runtime.win-x64/bin/Release/Nsharp.Ninja.runtime.win-x64.*.nupkg"
 on: "push"

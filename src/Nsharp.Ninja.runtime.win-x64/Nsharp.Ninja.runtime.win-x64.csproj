@@ -6,4 +6,16 @@
 		<TargetFramework>net6.0</TargetFramework>
 	</PropertyGroup>
 
+	<Target BeforeTargets="Build" Name="NativeBuild">
+		<PropertyGroup>
+			<BuildDirectory>$(MSBuildProjectDirectory)/bin/$(Configuration)/native-build/</BuildDirectory>
+			<Generator>"Visual Studio 17 2022"</Generator>
+			<InstallDirectory>$(MSBuildProjectDirectory)/bin/$(Configuration)/native-install/</InstallDirectory>
+			<SourceDirectory>$(MSBuildProjectDirectory)/../../libs/ninja/</SourceDirectory>
+		</PropertyGroup>
+		<Exec Command="cmake -B $(BuildDirectory) -G $(Generator) -S $(SourceDirectory)" />
+		<Exec Command="cmake --build $(BuildDirectory) --config $(Configuration) --parallel 1" />
+		<Exec Command="cmake --install $(BuildDirectory) --config $(Configuration) --prefix $(InstallDirectory)" />
+	</Target>
+
 </Project>

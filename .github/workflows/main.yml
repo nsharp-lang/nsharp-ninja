@@ -1,4 +1,20 @@
 jobs:
+  build:
+    runs-on: "ubuntu-22.04"
+    steps:
+    - uses: "actions/checkout@v3"
+      with:
+        submodules: true
+    - uses: "actions/setup-dotnet@v2"
+      with:
+        global-json-file: "global.json"
+    - run: "dotnet restore"
+    - run: "dotnet build ./src/Nsharp.Ninja/Nsharp.Ninja.csproj --configuration Release"
+    - run: "dotnet pack ./src/Nsharp.Ninja/Nsharp.Ninja.csproj --configuration Release"
+    - uses: "actions/upload-artifact@v3"
+      with:
+        name: "Nsharp.Ninja"
+        path: "./src/Nsharp.Ninja/bin/Release/Nsharp.Ninja.*.nupkg"
   build-linux-x64:
     runs-on: "ubuntu-22.04"
     steps:

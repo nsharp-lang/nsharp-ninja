@@ -11,6 +11,10 @@ jobs:
     - run: "dotnet restore"
     - run: "dotnet build ./src/Nsharp.Ninja.runtime.linux-x64/Nsharp.Ninja.runtime.linux-x64.csproj --configuration Release"
     - run: "dotnet pack ./src/Nsharp.Ninja.runtime.linux-x64/Nsharp.Ninja.runtime.linux-x64.csproj --configuration Release"
+    - uses: "actions/upload-artifact@v3"
+      with:
+        name: "Nsharp.Ninja"
+        path: "./src/Nsharp.Ninja.runtime.win-x64/bin/Release/Nsharp.Ninja.runtime.win-x64.*.nupkg"
   build-win-x64:
     runs-on: "windows-2022"
     steps:

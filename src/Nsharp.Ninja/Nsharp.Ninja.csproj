@@ -6,4 +6,8 @@
 		<TargetFramework>net6.0</TargetFramework>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<Content CopyToOutputDirectory="PreserveNewest" Include="runtime.json" Pack="true" PackagePath="runtime.json" />
+	</ItemGroup>
+
 </Project>

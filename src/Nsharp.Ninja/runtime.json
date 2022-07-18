@@ -1,0 +1,20 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"runtimes": {
+		"osx-x64": {
+			"Nsharp.Ninja": {
+				"Nsharp.Ninja.runtime.osx-x64": "1.11.0"
+			}
+		},
+		"linux-x64": {
+			"Nsharp.Ninja": {
+				"Nsharp.Ninja.runtime.linux-x64": "1.11.0"
+			}
+		},
+		"win-x64": {
+			"Nsharp.Ninja": {
+				"Nsharp.Ninja.runtime.win-x64": "1.11.0"
+			}
+		}
+	}
+}

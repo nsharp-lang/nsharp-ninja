@@ -20,7 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2DC83484-58C
 		src\dir.props = src\dir.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsharp.Ninja", "src\Nsharp.Ninja\Nsharp.Ninja.csproj", "{68FB65A4-6DE7-4DD5-A060-8912789CE225}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nsharp.Ninja", "src\Nsharp.Ninja\Nsharp.Ninja.csproj", "{68FB65A4-6DE7-4DD5-A060-8912789CE225}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{F3DBBD17-67FC-4702-AD0D-B0594B6C292A}"
 EndProject
@@ -36,6 +36,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ninja", "ninja", "{B028F689
 		libs\ninja\CMakeLists.txt = libs\ninja\CMakeLists.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsharp.Ninja.runtime.win-x64", "src\Nsharp.Ninja.runtime.win-x64\Nsharp.Ninja.runtime.win-x64.csproj", "{874556E0-532A-43F7-8A2B-51C36A4CC7A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{68FB65A4-6DE7-4DD5-A060-8912789CE225}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68FB65A4-6DE7-4DD5-A060-8912789CE225}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68FB65A4-6DE7-4DD5-A060-8912789CE225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{874556E0-532A-43F7-8A2B-51C36A4CC7A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874556E0-532A-43F7-8A2B-51C36A4CC7A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874556E0-532A-43F7-8A2B-51C36A4CC7A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874556E0-532A-43F7-8A2B-51C36A4CC7A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{68FB65A4-6DE7-4DD5-A060-8912789CE225} = {2DC83484-58CA-46C6-B571-85F7B8305A6F}
 		{7C64E566-43E9-4B7B-B51A-12331BBC8687} = {F3DBBD17-67FC-4702-AD0D-B0594B6C292A}
 		{B028F689-0074-47BA-BE76-04DC6EACE902} = {623B4377-9A8F-47D2-AE61-85220B71E6B9}
+		{874556E0-532A-43F7-8A2B-51C36A4CC7A2} = {2DC83484-58CA-46C6-B571-85F7B8305A6F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B1C5F00-7924-421F-8B51-D7DCF4C137CC}

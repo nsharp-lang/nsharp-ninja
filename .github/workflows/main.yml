@@ -8,6 +8,7 @@ jobs:
     - uses: "actions/setup-dotnet@v2"
       with:
         global-json-file: "global.json"
+    - run: "sudo apt-get install -y cmake ninja-build"
     - run: "dotnet restore"
     - run: "dotnet build ./src/Nsharp.Ninja.runtime.linux-x64/Nsharp.Ninja.runtime.linux-x64.csproj --configuration Release"
     - run: "dotnet pack ./src/Nsharp.Ninja.runtime.linux-x64/Nsharp.Ninja.runtime.linux-x64.csproj --configuration Release"

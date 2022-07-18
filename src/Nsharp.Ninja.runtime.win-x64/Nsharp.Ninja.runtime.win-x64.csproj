@@ -3,8 +3,13 @@
 	<Import Project="../dir.props" />
 	
 	<PropertyGroup>
+		<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
 		<TargetFramework>net6.0</TargetFramework>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<Content CopyToOutputDirectory="PreserveNewest" Include="bin/$(Configuration)/native-install/**/*" Pack="true" PackagePath="tools/$(TargetFramework)/$(RuntimeIdentifier)/" />
+	</ItemGroup>
 
 	<Target BeforeTargets="Build" Name="NativeBuild">
 		<PropertyGroup>
